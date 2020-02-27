@@ -56,3 +56,30 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+
+.bigdiv {
+	display: flex;
+}
+
+.recipes {
+	display: flex;
+	
+	vertical-align: top;
+}
+.recipe {
+	display: inline-block;
+	width:33%;
+}
+
+.labels {
+	display: flex;
+	width: 15%;
+	margin-top: 112px;
+	padding-left: 20px;
+	align-content: bottom;
+	font-weight: bold;
+	
+}
+a > img {
+	width: 50%;
+}
