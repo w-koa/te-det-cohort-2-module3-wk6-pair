@@ -9,6 +9,10 @@ body, header, nav {
 	margin: 0px;
 }
 
+#main-content {
+	
+}
+
 header {
 	background-color: #0099CC;
 	color: white;
@@ -57,29 +61,24 @@ section {
 	border-radius: 7px;
 }
 
-.bigdiv {
-	display: flex;
-}
-
-.recipes {
-	display: flex;
-	
-	vertical-align: top;
-}
-.recipe {
+.recipeTable{
 	display: inline-block;
-	width:33%;
+	vertical-align: bottom;
+	border-collapse: collapse;
 }
 
-.labels {
-	display: flex;
-	width: 15%;
-	margin-top: 112px;
-	padding-left: 20px;
-	align-content: bottom;
-	font-weight: bold;
-	
-}
-a > img {
+.product-image > img {
 	width: 50%;
+}
+
+#recipeNameRow {
+	background-color: #D0D0D0;
+}
+
+#recipeTimeRow {
+	background-color: #D0D0D0;
+}
+
+#recipeRatingRow{
+	background-color: #D0D0D0;
 }
