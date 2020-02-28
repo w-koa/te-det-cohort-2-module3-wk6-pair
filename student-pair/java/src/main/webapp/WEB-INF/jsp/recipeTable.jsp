@@ -25,44 +25,49 @@
 		<h1>Recipes</h1>
 		<!-- Use the request attribute "recipes" (List<Recipe>) -->
 
-	
+
 
 		<table class='recipeTable'>
 			<tr>
 				<th></th>
 				<c:forEach var='recipe' items='${recipes}'>
-				<td>	<a class="product-image" href="#"> <img
-						src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
-					</a> </td>
+					<c:url var = "recipeDetails" value = "recipeDetails?recipeId=${recipe.recipeId}"/>
+					<td><a class="product-image" href="${recipeDetails}"> <img
+							src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
+					</a></td>
 				</c:forEach>
 
 			</tr>
 			<tr>
 				<th>Name</th>
 				<c:forEach var='recipe' items='${recipes}'>
-				<td id='recipeNameRow'><c:out value='${recipe.name}' /> </td>
+					<td id='recipeNameRow'><c:out value='${recipe.name}' /></td>
 				</c:forEach>
 			</tr>
 
 			<tr>
 				<th>Type</th>
 				<c:forEach var='recipe' items='${recipes}'>
-				<td id='recipeTypeRow'><c:out value='${recipe.recipeType}' /> </td>
+					<td id='recipeTypeRow'><c:out value='${recipe.recipeType}' />
+					</td>
 				</c:forEach>
 			</tr>
 
 			<tr>
 				<th>Cook Time</th>
 				<c:forEach var='recipe' items='${recipes}'>
-					<td id='recipeTimeRow'><c:out value='${recipe.cookTimeInMinutes} min' /> </td>
+					<td id='recipeTimeRow'><c:out
+							value='${recipe.cookTimeInMinutes} min' /></td>
 				</c:forEach>
 			</tr>
 
 			<tr>
 				<th>Ingredients</th>
 				<c:forEach var='recipe' items='${recipes}'>
-				<c:set var="numberOfIngredients" value="${fn:length(recipe.ingredients)}" />
-				<td id='recipeNumbOfIngredientsRow'><c:out value='${numberOfIngredients} ingredients' /> </td>
+					<c:set var="numberOfIngredients"
+						value="${fn:length(recipe.ingredients)}" />
+					<td id='recipeNumbOfIngredientsRow'><c:out
+							value='${numberOfIngredients} ingredients' /></td>
 				</c:forEach>
 			</tr>
 
@@ -71,9 +76,9 @@
 				<c:forEach var='recipe' items='${recipes}'>
 					<fmt:formatNumber var='ratingInt' value="${recipe.averageRating}"
 						maxFractionDigits="0" type="number" />
-					<td id='recipeRatingRow'><a class="product-image" href="#"> <img
-						src="<c:url value="/img/${ratingInt}-star.png" />" />
-					</a></td> 
+					<td id='recipeRatingRow'><a class="product-image" href="#">
+							<img src="<c:url value="/img/${ratingInt}-star.png" />" />
+					</a></td>
 				</c:forEach>
 			</tr>
 

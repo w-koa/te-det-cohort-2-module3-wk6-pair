@@ -82,3 +82,39 @@ section {
 #recipeRatingRow{
 	background-color: #D0D0D0;
 }
+
+
+.recipeTiles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px;
+}
+.recipeTile {
+	
+	width: 33%;
+	background-color: #f4fae1;
+	vertical-align: bottom;
+	text-align:left;
+	font-weight: bold;
+	align-content: left;
+	
+}
+.recipeTile .product-image > img {
+	width: 100%;
+}
+
+.rating-image {
+	width: 30%;
+	align: left;
+	
+}
+.numOfIngredientsTile {
+	display: inline-block;
+	vertical-align: bottom;
+	font-weight: normal;
+}
+.numOfIngredientsTile > .ingredientCount {
+	display: inline-block;
+	float:right;
+}
