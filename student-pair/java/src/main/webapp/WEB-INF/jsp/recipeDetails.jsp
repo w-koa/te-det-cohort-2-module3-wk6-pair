@@ -11,13 +11,16 @@
 
 <body>
 
-	<div class="recipeDetails">
+	<section class="main-content">
 
-		<img src="/img/recipe${recipe.recipeId}.jpg" />
-		<c:out value="oiwjeoifjwej" />
+		<img src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
+		<h1><c:out value="${recipe.name}" /></h1>
+		<c:out value = "${recipe.recipeType}"/>
+		<h2><c:out value = "Cook Time"/></h2><c:out value = "${recipe.cookTimeInMinutes} minutes"/>
+		<c:out value = "${recipe.description}"/>
 
 
-	</div>
+	</section>
 
 
 

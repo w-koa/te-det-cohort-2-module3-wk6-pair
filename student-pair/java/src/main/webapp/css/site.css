@@ -88,16 +88,17 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 20px;
+	margin: 40px;
 }
 .recipeTile {
 	
-	width: 33%;
+	width: 30%;
 	background-color: #f4fae1;
 	vertical-align: bottom;
 	text-align:left;
 	font-weight: bold;
 	align-content: left;
+
 	
 }
 .recipeTile .product-image > img {
