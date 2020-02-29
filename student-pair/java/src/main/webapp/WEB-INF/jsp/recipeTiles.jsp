@@ -27,26 +27,34 @@
 
 			<c:forEach var="recipe" items="${recipes}">
 				<div class="recipeTile">
-					<c:url var = "recipeDetails" value ="/recipeDetails?recipeId=${recipe.recipeId}"/>
+					<c:url var="recipeDetails"
+						value="/recipeDetails?recipeId=${recipe.recipeId}" />
 					<a class="product-image" href="${recipeDetails}"> <img
 						src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
 					</a> <br>
-					<c:out value="${recipe.name}" />
-					<br>
-
-					<div class="numOfIngredientsTile">
-						<fmt:formatNumber var='ratingInt' value="${recipe.averageRating}"
-							maxFractionDigits="0" type="number" />
-						<img class="rating-image"
-							src="<c:url value="/img/${ratingInt}-star.png" />" />
+					<div class="recipeInfoBlock">
+						<p>
+							<c:out value="${recipe.name}" />
+						</p>
 
 
-						<c:set var="numberOfIngredients"
-							value="${fn:length(recipe.ingredients)}" />
+						<div>
+							<fmt:formatNumber var='ratingInt' value="${recipe.averageRating}"
+								maxFractionDigits="0" type="number" />
+
+							
+								<img class="rating-image"
+									src="<c:url value="/img/${ratingInt}-star.png" />" />
+							
+
+							
+							<c:set var="numberOfIngredients"
+								value="${fn:length(recipe.ingredients)}" />
 
 
-						<div class="ingredientCount">
+
 							<c:out value='${numberOfIngredients} ingredients' />
+						
 						</div>
 					</div>
 				</div>

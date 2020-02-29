@@ -94,11 +94,8 @@ section {
 	
 	width: 30%;
 	background-color: #f4fae1;
-	vertical-align: bottom;
-	text-align:left;
+	
 	font-weight: bold;
-	align-content: left;
-
 	
 }
 .recipeTile .product-image > img {
@@ -110,12 +107,52 @@ section {
 	align: left;
 	
 }
-.numOfIngredientsTile {
+
+.recipeTile .recipeInfoBlock {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+.main-content .detailSummary {
+	text-align: left;
+}
+
+
+.main-content img {
+	float: left;
 	display: inline-block;
-	vertical-align: bottom;
+	width: 25%;
+	margin: 10px;
+}
+.main-content h3 {
+	display:inline-block;
+}
+
+.ingredients {
+	text-align: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px;
+	border-style: none none solid none;
+}
+
+.ingredients p {
+	font-weight: bold;
+}
+
+.prep {
+	text-align: left;
+	padding-bottom: 20px;
+	margin-left: 20px;
+}
+#cookTime {
+	font-weight: bold;
+}
+.normal {
 	font-weight: normal;
 }
-.numOfIngredientsTile > .ingredientCount {
-	display: inline-block;
-	float:right;
+.prep p {
+	font-weight: bold;
 }

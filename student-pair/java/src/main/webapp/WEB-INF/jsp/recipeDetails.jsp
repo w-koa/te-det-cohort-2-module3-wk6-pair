@@ -7,17 +7,56 @@
 <html>
 
 
-<c:import url = "/WEB-INF/jsp/header.jsp"/>
+<c:import url="/WEB-INF/jsp/header.jsp" />
 
 <body>
 
 	<section class="main-content">
 
+
 		<img src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
-		<h1><c:out value="${recipe.name}" /></h1>
-		<c:out value = "${recipe.recipeType}"/>
-		<h2><c:out value = "Cook Time"/></h2><c:out value = "${recipe.cookTimeInMinutes} minutes"/>
-		<c:out value = "${recipe.description}"/>
+		<div class="detailSummary">
+			<h3 id="recipeName">
+				<c:out value="${recipe.name}" />
+			</h3>
+			<p>
+			<c:out value="${recipe.recipeType}" />
+			</p>
+			<p id="cookTime">
+				<c:out value="Cook Time " />
+
+				<span class = "normal"> <c:out value="${recipe.cookTimeInMinutes} minutes" /> </span>
+			</p>
+			<p>
+				<c:out value="${recipe.description}" />
+			</p>
+		</div>
+
+		<div class="ingredients">
+			<p>Ingredients</p>
+
+			<ul>
+				<c:forEach var="recipe" items="${recipe.ingredients}">
+					<li><c:out value="${recipe.quantity} ${recipe.name}"></c:out></li>
+				</c:forEach>
+
+			</ul>
+
+
+		</div>
+
+		<div class="prep">
+			<p>Preparation</p>
+			<ol>
+				<c:forEach var="step" items="${recipe.preparationSteps}">
+					<li><c:out value="${step}" /></li>
+				</c:forEach>
+
+			</ol>
+
+
+
+		</div>
 
 
 	</section>
