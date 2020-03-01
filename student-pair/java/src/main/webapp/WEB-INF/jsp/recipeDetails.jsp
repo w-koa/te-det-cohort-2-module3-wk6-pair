@@ -14,22 +14,27 @@
 	<section class="main-content">
 
 
-		<img src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
-		<div class="detailSummary">
-			<h3 id="recipeName">
-				<c:out value="${recipe.name}" />
-			</h3>
-			<p>
-			<c:out value="${recipe.recipeType}" />
-			</p>
-			<p id="cookTime">
-				<c:out value="Cook Time " />
 
-				<span class = "normal"> <c:out value="${recipe.cookTimeInMinutes} minutes" /> </span>
-			</p>
-			<p>
+		<div class="summaryContainer">
+			<img src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
+			<div class="recipeSummary">
+				<h3 id="recipeName">
+					<c:out value="${recipe.name}" />
+				</h3>
+
+				<c:out value="${recipe.recipeType}" />
+
+				<p id="cookTime">
+					<c:out value="Cook Time " />
+
+					<span class="normal"> <c:out
+							value="${recipe.cookTimeInMinutes} minutes" />
+					</span>
+				</p>
+
 				<c:out value="${recipe.description}" />
-			</p>
+
+			</div>
 		</div>
 
 		<div class="ingredients">
@@ -44,6 +49,11 @@
 
 
 		</div>
+
+		<div class = "line">
+		
+		</div>
+
 
 		<div class="prep">
 			<p>Preparation</p>

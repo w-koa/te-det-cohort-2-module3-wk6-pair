@@ -31,30 +31,30 @@
 						value="/recipeDetails?recipeId=${recipe.recipeId}" />
 					<a class="product-image" href="${recipeDetails}"> <img
 						src="<c:url value="/img/recipe${recipe.recipeId}.jpg" />" />
-					</a> <br>
+					</a>
 					<div class="recipeInfoBlock">
-						<p>
-							<c:out value="${recipe.name}" />
-						</p>
+
+						<c:out value="${recipe.name}" />
 
 
-						<div>
+
+						<div class="starAndIngredients">
 							<fmt:formatNumber var='ratingInt' value="${recipe.averageRating}"
 								maxFractionDigits="0" type="number" />
 
-							
-								<img class="rating-image"
-									src="<c:url value="/img/${ratingInt}-star.png" />" />
-							
 
-							
+							<img class="rating-image"
+								src="<c:url value="/img/${ratingInt}-star.png" />" />
+
+
+
 							<c:set var="numberOfIngredients"
 								value="${fn:length(recipe.ingredients)}" />
 
 
 
 							<c:out value='${numberOfIngredients} ingredients' />
-						
+
 						</div>
 					</div>
 				</div>
